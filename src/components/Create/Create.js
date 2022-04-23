@@ -3,7 +3,7 @@ import { API } from 'aws-amplify';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { listEvents } from '../../graphql/queries';
 import { createEvent as createEventsMutation, deleteEvent as deleteEventsMutation } from '../../graphql/mutations';
-
+import { Link } from 'react-router-dom'
 const initialFormState = { Description: '', Date: '' , Time: ''}
 
 const Create = () => {
@@ -35,6 +35,14 @@ const Create = () => {
     return (
       <div className="App">
         <h1>My Notes App</h1>
+
+
+        <Link to='/Lobby'>
+
+          <button>Lobby</button>
+        </Link>
+
+
         <input
           onChange={e => setFormData({ ...formData, 'name': e.target.value})}
           placeholder="Note name"

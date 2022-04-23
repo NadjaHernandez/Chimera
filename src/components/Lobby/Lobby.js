@@ -1,6 +1,6 @@
 import './Lobby.css';
 import {useRef} from "react";
-
+import Polling from './Polling'
 let stream;
 function Lobby() {
     const videoRef = useRef()
@@ -19,6 +19,7 @@ function Lobby() {
 
 
   return (
+      <>
     <div className="Lobby">
         <header className="Lobby-header">
             <video className="video" width={800} ref={videoRef} autoPlay controls/>
@@ -37,6 +38,7 @@ function Lobby() {
 
         
     </div>
+    </>
   )
 }
 
