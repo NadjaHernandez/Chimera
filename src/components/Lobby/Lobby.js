@@ -21,15 +21,16 @@ function Lobby() {
 
   return (
       <>
-            <Link to='/'>
 
-<button>Create</button>
-</Link>
     <div className="Lobby">
         <header className="Lobby-header">
             <video className="video" width={800} ref={videoRef} autoPlay controls/>
         </header>
         <body>
+        <Link to='/'>
+
+<button className="button">Create</button>
+</Link>
             <button className="button" onClick={()=>{
                 shareScreen()
             }}>Share Screen</button>
